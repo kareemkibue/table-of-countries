@@ -25,9 +25,13 @@
   dependencies:
     "@types/angular" "*"
 
-"@types/angular@*":
+"@types/angular@*", "@types/angular@^1.6.25":
   version "1.6.25"
   resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.25.tgz#d403e94b40e06af3d9b76da5031795a9b929d08a"
+
+"SASS-Custom@https://github.com/kareemkibue/css":
+  version "0.1.0"
+  resolved "https://github.com/kareemkibue/css#9615401c19eaa7ae112d68633458cbf1af52b52b"
 
 abbrev@1:
   version "1.1.0"
