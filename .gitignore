@@ -7,7 +7,6 @@ syntax: glob
 
 #project specific
 node_modules/
-package-lock.json
 .sass-cache/
 .tscache/
 .RESOURCES/
