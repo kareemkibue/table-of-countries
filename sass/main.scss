@@ -10,11 +10,7 @@
 
 /*Vendors*/
 
-// @import "vendors/normalize";
-
-/*Vendor Override Styles*/
-
-// / @import "vendor-override/normalize-override";
+@import "vendor/normalize";
 
 /*Base*/
 
@@ -32,10 +28,3 @@
 /*Components*/
 
 @import "components/buttons";
-
-/*Pages*/
-
-@import "pages/home";
-@import "pages/about";
-@import "pages/contact";
-@import "pages/404";

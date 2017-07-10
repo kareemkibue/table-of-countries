@@ -1,0 +1,12 @@
+{
+    "files": [
+        "app/main.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5",
+        "module": "system",
+        "outFile": "main.js",
+        "inlineSourceMap": true
+    }
+}
