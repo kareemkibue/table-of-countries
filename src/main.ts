@@ -4,6 +4,7 @@ module tot {
 
     export let appRootComponent = {
         template: `<div class="container"><search-form></search-form>
+            <alpha-pagination></alpha-pagination>
             <countries-table></countries-table></div>`
     }
 
@@ -49,6 +50,11 @@ module tot {
         controllerAs: 'frm'
     }
 
+    export let alphaPaginationComponent = {
+        template: `<ul class="alpha-pagination"><li><a href="#">A</li><li><a href="#">B</li><ul>`,
+        controllerAs: 'pagination'
+    }
+
 }
 
 angular
@@ -56,4 +62,5 @@ angular
 
     .component( 'appRoot', tot.appRootComponent )
     .component( 'searchForm', tot.searchFormComponent )
+    .component( 'alphaPagination', tot.alphaPaginationComponent )
     .component( 'countriesTable', tot.countriesTblComponent );
