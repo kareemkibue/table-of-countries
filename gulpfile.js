@@ -1,7 +1,6 @@
 /*Gulp*/
 var gulp = require( 'gulp' );
 var webserver = require( 'gulp-webserver' );
-var concat = require( 'gulp-concat' );
 /*SASS/CSS*/
 var sass = require( 'gulp-sass' );
 var autoPrefixer = require( 'gulp-autoprefixer' );

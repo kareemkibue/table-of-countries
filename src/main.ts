@@ -1,6 +1,6 @@
 /// <reference path="../node_modules/@types/angular/index.d.ts" />
 
-module toc {
+module tot {
 
     export let appRootComponent = {
         template: '<countries-table/>'
@@ -39,7 +39,7 @@ module toc {
 }
 
 angular
-    .module( 'tocApp', [ 'ngAnimate' ] )
+    .module( 'totApp', [ 'ngAnimate' ] )
 
-    .component( 'appRoot', toc.appRootComponent )
-    .component( 'countriesTable', toc.countriesTblComponent );
+    .component( 'appRoot', tot.appRootComponent )
+    .component( 'countriesTable', tot.countriesTblComponent );

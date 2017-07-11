@@ -14,14 +14,10 @@
         "@types/angular-animate": "^1.5.8",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
-        "typescript": "^2.4.1",
-
-
+        "gulp-cssnano": "^2.1.2",
         "gulp-sass": "^3.1.0",
-
         "gulp-typescript": "^3.2.0",
-
         "gulp-webserver": "^0.9.1",
-
+        "typescript": "^2.4.1"
     }
 }
