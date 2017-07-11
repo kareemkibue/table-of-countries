@@ -2,6 +2,7 @@
 var gulp = require( 'gulp' );
 var debug = require( 'gulp-debug' );
 var sourceMaps = require( 'gulp-sourcemaps' );
+var webserver = require( 'gulp-webserver' );
 /*SASS/CSS*/
 var sass = require( 'gulp-sass' );
 var autoPrefixer = require( 'gulp-autoprefixer' );
@@ -17,6 +18,17 @@ var vendorScriptFiles = [
     'node_modules/angular/angular.min.js',
     'node_modules/angular-animate/angular-animate.min.js'
 ];
+
+gulp.task( 'serve', function() {
+    gulp.src( '' )
+        .pipe( webserver( {
+            fallback: 'index.html',
+            host: 'localhost',
+            livereload: true,
+            open: true,
+            port: 1010
+        } ) )
+} );
 
 gulp.task( 'watch', function() {
     gulp.watch( 'sass/**/*.scss', [ 'css' ] );
