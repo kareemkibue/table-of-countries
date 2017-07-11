@@ -1,0 +1,27 @@
+{
+    "name": "table-of-countries",
+    "version": "0.1.0",
+    "repository": "https://github.com/kareemkibue/table-of-countries.git",
+    "author": "Kareem Kibue <mail@kareemkibue.com>",
+    "license": "MIT",
+    "dependencies": {
+        "angular": "^1.6.5",
+        "angular-animate": "^1.6.5",
+        "normalize.css": "^5.0.0"
+    },
+    "devDependencies": {
+        "@types/angular": "^1.6.25",
+        "@types/angular-animate": "^1.5.8",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.0.0",
+        "typescript": "^2.4.1",
+
+
+        "gulp-sass": "^3.1.0",
+
+        "gulp-typescript": "^3.2.0",
+
+        "gulp-webserver": "^0.9.1",
+
+    }
+}
