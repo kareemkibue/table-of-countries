@@ -1,7 +1,6 @@
 /*Gulp*/
 var gulp = require( 'gulp' );
 var webserver = require( 'gulp-webserver' );
-var concat = require( 'gulp-concat' );
 /*SASS/CSS*/
 var sass = require( 'gulp-sass' );
 var autoPrefixer = require( 'gulp-autoprefixer' );
@@ -9,7 +8,6 @@ var cssMin = require( 'gulp-cssnano' );
 /*JS*/
 var ts = require( 'gulp-typescript' );
 var tsProject = ts.createProject( 'tsconfig.json' );
-/*Config*/
 
 gulp.task( 'serve', function() {
     gulp.src( './' )

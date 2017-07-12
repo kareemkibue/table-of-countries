@@ -1,7 +1,34 @@
-$montserrat: "Montserrat",
+/*Variables*/
+
+$lato: "Lato",
 serif;
 $black: #000;
 $white: #fff;
+$alto: #d9d9d9;
+$robins-egg-blue: #03BBD4;
+
+/*Classes*/
+
+@mixin center($axis:null) {
+    @if $axis==vertical {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    @else if $axis==horizontal {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    @else {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
 
 /*Config*/
 
@@ -12,42 +39,198 @@ $white: #fff;
 }
 
 body {
-    font-size: 14px;
-    font-family: $montserrat;
     color: #1a1a1a;
+    font-size: 14px;
+    font-family: $lato;
     background-color: $white;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
 }
 
-.tbl {
-    table-layout: auto;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
+
+/*Containers, Wrappers*/
+
+.container {
+    width: 1600px;
+    padding: 15px;
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+
+/*Form Styles*/
+
+.form {
+    position: relative;
+    width: 300px;
+    border: 1px solid $alto;
+    input {
+        width: 100%;
+        border-radius: 1px;
+        padding: 10px 120px 10px 15px;
+        border: 0;
+        font-family: inherit;
+    }
+    button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+        background: none;
+        border: 1px;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            bottom: 20%;
+            left: 0;
+            width: 1px;
+            background: $alto;
+        }
+        svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            margin: auto;
+            fill: $alto;
+        }
+    }
+}
+
+
+/* Alpha-pagination */
+
+.alpha-pagination {
+    ul {
+        display: flex;
+        padding: 0 10px;
+        margin: 0;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $alto;
+        border-bottom: 1px solid $alto;
+    }
+    li {
+        padding: 11px 10px;
+    }
+    a {
+        position: relative;
+        display: block;
+        color: darken($robins-egg-blue, 5%);
+        text-decoration: none;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: (20px/2);
+            background: lighten($robins-egg-blue, 5%);
+            transition: .2s ease-in;
+            opacity: 0;
+            left: -5px;
+            top: -2px;
+            z-index: -1;
+            transform: scale(0);
+        }
+    }
+    li {
+        &:hover a {
+            color: $white;
+            &:before {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        &.active a {
+            color: $white;
+            &:before {
+                opacity: 1;
+                transform: scale(1.2);
+                background: lighten($robins-egg-blue, 8%);
+            }
+        }
+    }
+}
+
+
+/*Table Styles*/
+
+.table {
     width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    table-layout: auto;
     border-collapse: collapse;
     overflow: hidden;
     th,
     td {
         padding: 15px;
-        border: 1px solid lighten($black, 85%);
+        border: 1px solid $alto;
     }
     /*thead*/
     th {
         background: darken($white, 5%);
-        font-weight: 500;
+        color: #5E5E5E;
+        font-weight: 600;
         text-transform: uppercase;
         text-align: left;
-        color: #5E5E5E;
     }
     /*tbody*/
     td {
+        background: darken($white, 2%);
         color: lighten(#000, 10%);
         font-size: 13px;
-        background: darken($white, 2%);
         cursor: pointer;
     }
     tr:hover td {
-        background: lighten(#03BBD4, 55%);
+        background: lighten($robins-egg-blue, 55%);
+    }
+}
+
+
+/*Select*/
+
+.select {
+    position: relative;
+    width: 150px;
+    border: 1px solid $alto;
+    select {
+        width: 100%;
+        padding: 8px 30px 8px 10px;
+        border: 0;
+        appearance: none;
+        font-family: inherit;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 10px;
+        width: (100px*.15);
+        height: (57px*.15);
+        margin: auto;
+        fill: $alto;
+        pointer-events: none;
+    }
+}
+
+
+/*@media*/
+
+@media all and (max-width: 1600px) {
+    .container {
+        width: 100%;
     }
 }
