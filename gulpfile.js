@@ -8,7 +8,6 @@ var cssMin = require( 'gulp-cssnano' );
 /*JS*/
 var ts = require( 'gulp-typescript' );
 var tsProject = ts.createProject( 'tsconfig.json' );
-/*Config*/
 
 gulp.task( 'serve', function() {
     gulp.src( './' )
